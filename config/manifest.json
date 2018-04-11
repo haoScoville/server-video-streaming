@@ -2,5 +2,11 @@
     "server":{
         "host":"localhost",
         "port":8000
-    }
+    },
+    "register":{
+        "plugins": [
+            "blipp",
+            {"plugin": "./users"}
+        ]
+    }  
 }

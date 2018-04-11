@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/haoScoville/server-video-streaming#readme",
   "dependencies": {
+    "blipp": "^3.0.0",
     "glue": "^5.0.0",
     "hapi": "^17.3.1"
   }
