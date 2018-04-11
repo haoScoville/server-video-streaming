@@ -1,4 +1,4 @@
-1/ Cần chức năng gì cho demo?
+﻿1/ Cần chức năng gì cho demo?
 2/ API nhận gì trả gì ?
 3/ Dùng framework for server node ?
 
@@ -27,7 +27,7 @@ Publisher:
 	localhost/{idStore} -> store { Name: “”, Image:””, Description:””}
 	localhost/{idStore}/publish -> live {sessionId:””, token: ““ (noted: role publisher)}
 Viewer:
-	localhost/stores/live -> return [stores { Name:””, Image:””, storeId:””}]
+	localhost/stores?live=t -> return [stores { Name:””, Image:””, storeId:””}]
 	localhost/{idStore}/subscribe -> return live{sessionID: “”, token: “” (noted: role viewer)}
 	
 
