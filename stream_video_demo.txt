@@ -1,0 +1,34 @@
+1/ Cần chức năng gì cho demo?
+2/ API nhận gì trả gì ?
+3/ Dùng framework for server node ?
+
+
+
+Answer:
+1/  Live streaming: 
+_ Có hai live stream trở lên (2 publisher)
+_ Có nhiều viewer coi cùng một live stream
+_ Viewer có thể lựa chọn live stream để coi
+
+——> Cần tài khoản user , ai live stream sẽ hiển thị trên screen để viewer lựa chọn
+——> Tabs bar for choosing live stream ( tabs at top ) 
+——> Set type= “Cửa hàng” sẽ có feature for live stream
+
+2/ Tạo được sessionId and token cho từng cửa hàng khi live stream
+_ Đăng nhập vào tài khoản, mỗi tài khoản có id dùng phân biệt để xác định cửa hàng nào đang live stream….
+_ Tự đông sinh sessionId và token khi một cửa hàng nào đó live stream
+
+3/ express or hapi
+store1
+store2
+
+Publisher:
+	localhost/login?username=“”&password=“”  -> return: storeId
+	localhost/{idStore} -> store { Name: “”, Image:””, Description:””}
+	localhost/{idStore}/publish -> live {sessionId:””, token: ““ (noted: role publisher)}
+Viewer:
+	localhost/stores/live -> return [stores { Name:””, Image:””, storeId:””}]
+	localhost/{idStore}/subscribe -> return live{sessionID: “”, token: “” (noted: role viewer)}
+	
+
+Noted: Image dùng Faker để tạo ra đường dẫn ảnh ở phía server 
