@@ -24,11 +24,12 @@ store2
 
 Publisher:
 	localhost/login?username=“”&password=“”  -> return: storeId
-	localhost/{idStore} -> store { Name: “”, Image:””, Description:””}
-	localhost/{idStore}/publish -> live {sessionId:””, token: ““ (noted: role publisher)}
+	localhost/store/{idStore} -> store { Name: “”, Image:””, Description:””}
+	localhost/store/{idStore}/start_publish -> live {sessionId:””, token: ““ (noted: role publisher)}
+	localhost/store/{idStore}/stop_publish -> store { Name: “”, Image:””, Description:””}
 Viewer:
 	localhost/stores?live=t -> return [stores { Name:””, Image:””, storeId:””}]
-	localhost/{idStore}/subscribe -> return live{sessionID: “”, token: “” (noted: role viewer)}
+	localhost/store/{idStore}/subscribe -> return live{sessionID: “”, token: “” (noted: role viewer)}
 	
 
 Noted: Image dùng Faker để tạo ra đường dẫn ảnh ở phía server 
