@@ -7,12 +7,7 @@
         "plugins": [
             "blipp",
             "./users",
-            "./seeds",
-            {"plugin": "hapi-mongodb", 
-             "option": {
-                 "url": "mongodb://localhost:27017/test"
-             }
-            }
+            "./seeds"
         ]
     }  
 }
