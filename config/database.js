@@ -1,4 +1,4 @@
-var Mongoose=require('mongoose')
+var Mongoose = require('mongoose')
 
 Mongoose.connect('mongodb://localhost:27017/test')
 var db = Mongoose.connection
