@@ -7,7 +7,7 @@
         "plugins": [
             "blipp",
             "./users",
-            "./seeds",
+            "./init",
             "./stores"
         ]
     }  
